@@ -7,9 +7,10 @@ import re
 
 # vars
 vars_file = "vars" # Path to the vars file
-lan_subnet = "192.168.1.0/24" # Address and CIDR of the local network
+
 with open(vars_file) as f: 
     vars = yaml.safe_load(f)
+lan_subnet = vars["lan_subnet"]
 known_macs = vars["known_macs"]
 bot_token = vars["bot_token"]
 bot_chat_id = vars["bot_chat_id"]
